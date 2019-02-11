@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Teacher_course extends CI_Controller {
 
         public function __construct()
 	{
@@ -11,6 +11,6 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('login/login');
+		$this->load->view('course/teacher');
 	}
 }
