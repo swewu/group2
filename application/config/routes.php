@@ -53,8 +53,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['login'] = 'Login/login';
 $route['student'] = 'users/users/student';
 $route['teacher'] = 'users/users/teacher';
-$route['course_student'] = 'users/users/teacher';
-$route['course_teacher'] = 'users/users/teacher';
+$route['course_student'] = 'users/users/student_course';
+$route['course_teacher'] = 'users/users/teacher_course';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';

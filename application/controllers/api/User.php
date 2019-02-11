@@ -18,9 +18,11 @@ class User extends CI_Controller
         $password = $this->input->post('password');
         $result =  $this->UserModel->login($username,$password);
         if($result == "Student"){
-            redirect('Users/users/student');
+            echo "<script>alert('Student Login success');window.location='http://localhost/group2/student;</script>";
+            //redirect('Users/users/student');
         }else if($result == "Lecture"){
-            redirect('Users/users/teacher');
+            echo "<script>alert('Teacher Login success');window.location='http://localhost/group2/teacher';</script>";
+            //redirect('Users/users/teacher');
         }
 
         // if($result){
@@ -36,5 +38,28 @@ class User extends CI_Controller
         //     $role = $this->session->userdata("user['role']");
         //     echo $role;
         // }
+    }
+
+    public function creat_regrade(){
+        $term = $this->input->post('term');
+        $year = $this->input->post('year');
+        $grade = $this->input->post('grade');
+        $studentid = $this->input->post('studentid');
+        $courseid = $this->input->post('courseid');
+        
+        $data = array(
+            'gradeid' => null,
+            'term' => $term,
+            'year' => $year,
+            'grade' => $grade, 
+            'studentid' => $studentid,
+            'courseid' => $courseid
+        );
+        $result =  $this->UserModel->insert_regrade($data);
+        if($result){
+            echo "<script>alert('Insert regrade success');window.location='http://localhost/group2/student';</script>";
+        }else{
+            echo "<script>alert('Insert regrade unsuccessful!!');window.history.back();</script>";
+        }
     }
 }

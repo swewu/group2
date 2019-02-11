@@ -71,7 +71,7 @@ button:hover {
 
 <div class="container">
 
-  <form class="form-horizontal" action="/action_page.php" >
+  <form class="form-horizontal" action="<?=base_url("api/User/login");?>" method="post" >
    <h2 align="center" class="mt-4 mb-3">ระบบป้อนข้อมูลรายวิชาที่ไม่ผ่าน</h2><br>
     <div class="form-group">
       <label class="control-label col-sm-2" for="Idnumber">รหัสนักศึกษา:</label>

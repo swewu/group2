@@ -25,4 +25,8 @@ class UserModel extends CI_Model
             return $result->row()->role;
         }
     }
+
+    function insert_regrade($data){
+        return $this->db->insert("regrade", $data);
+    }
 }

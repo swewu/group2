@@ -18,4 +18,15 @@ class Users extends CI_Controller
     {
 	    $this->load->view('users/teacher');
     }
+
+    public function student_course()
+	{
+        $this->load->view('course/student');
+    }
+
+    public function teacher_course()
+	{
+        $this->load->view('course/student');
+    }
+
 }
