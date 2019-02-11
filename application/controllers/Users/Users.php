@@ -17,5 +17,5 @@ class Users extends CI_Controller
     public function teacher()
     {
 	    $this->load->view('users/teacher');
-    }  
+    }
 }
