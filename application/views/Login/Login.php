@@ -10,23 +10,26 @@ form {border: 3px solid #f1f1f1 ; margin:50px 0px; padding:0px; align:center; wi
 
 
 input[type=text], input[type=password] {
-  width:30%;
+  width: 30%;
   padding: 6px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
   
 }
 
 button {
+
+  width: 40%;
   background-color: #000099;
   color: white;
   padding: 10px 20px;
   margin: 8px 0;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
-  width: 40%;
 }
 button:hover {
   opacity: 0.8;
