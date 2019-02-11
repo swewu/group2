@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Users extends CI_Controller 
+class Users extends CI_Controller
 {
 	public function __construct()
 	{
@@ -12,11 +12,10 @@ class Users extends CI_Controller
 	public function student()
 	{
 		$this->load->view('users/student');
-    }
+  }
     
-    public function teacher()
+  public function teacher()
 	{
 		$this->load->view('users/teacher');
-    }
-    
+  }  
 }
