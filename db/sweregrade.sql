@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 12, 2019 at 05:01 AM
+-- Generation Time: Feb 12, 2019 at 05:32 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -160,6 +160,42 @@ CREATE TABLE `regrade` (
   `studentid` int(10) NOT NULL,
   `courseid` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `regrade`
+--
+
+INSERT INTO `regrade` (`gradeid`, `term`, `year`, `grade`, `studentid`, `courseid`) VALUES
+(1, 1, 2, 'D+', 60140852, 'SWE60-213'),
+(2, 2, 2, 'D', 60144235, 'SWE60-101'),
+(3, 3, 2, 'D', 60141900, 'DIM60-101'),
+(4, 3, 2, 'D', 60140365, 'SWE60-211'),
+(5, 2, 2, 'D+', 60112869, 'SWE60-212'),
+(6, 2, 1, 'D+', 61111415, 'MAT61-111'),
+(7, 1, 2, 'D', 60120623, 'DIM60-101'),
+(8, 1, 2, 'D', 60144235, 'SWE60-222'),
+(9, 2, 2, 'D+', 60144235, 'SWE60-271'),
+(10, 2, 2, 'D+', 60113479, 'SWE60-494'),
+(11, 3, 1, 'D', 61111191, 'MTA61-101'),
+(12, 3, 1, 'D', 61105888, 'MAT61-111'),
+(13, 3, 1, 'D', 61115184, 'MAT61-001'),
+(14, 1, 1, 'D', 61105631, 'GEN61-121'),
+(15, 2, 2, 'D', 60140852, 'SWE60-242'),
+(16, 1, 2, 'D+', 60140852, 'SWE60-213'),
+(17, 2, 2, 'D', 60144235, 'SWE60-101'),
+(18, 3, 2, 'D', 60141900, 'DIM60-101'),
+(19, 3, 2, 'D', 60140365, 'SWE60-211'),
+(20, 2, 2, 'D+', 60112869, 'SWE60-212'),
+(21, 2, 1, 'D+', 61111415, 'MAT61-111'),
+(22, 1, 2, 'D', 60120623, 'DIM60-101'),
+(23, 1, 2, 'D', 60144235, 'SWE60-222'),
+(24, 2, 2, 'D+', 60144235, 'SWE60-271'),
+(25, 2, 2, 'D+', 60113479, 'SWE60-494'),
+(26, 3, 1, 'D', 61111191, 'MTA61-101'),
+(27, 3, 1, 'D', 61105888, 'MAT61-111'),
+(28, 3, 1, 'D', 61115184, 'MAT61-001'),
+(29, 1, 1, 'D', 61105631, 'GEN61-121'),
+(30, 2, 2, 'D', 60140852, 'SWE60-242');
 
 -- --------------------------------------------------------
 
@@ -330,7 +366,7 @@ ALTER TABLE `historygrade`
 -- AUTO_INCREMENT for table `regrade`
 --
 ALTER TABLE `regrade`
-  MODIFY `gradeid` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `gradeid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `student`
 --
