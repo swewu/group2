@@ -10,7 +10,13 @@
 </head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif; }
-form {border: 1px solid #f1f1f1 ; margin:50px 0px; padding:0px; align:center; width: 80%; }
+form {
+  border: 1px solid #f1f1f1 ; 
+  margin:50px 0px; 
+  padding:0px; align:center; 
+  width: 80%;  
+  background-color: #FFFFF0;
+  border-radius: 20px; }
 
 
 
@@ -71,61 +77,51 @@ button:hover {
 
 <div class="container">
 
-    <form class="form-horizontal" action="<?=base_url("api/User/creat_regrade");?>" method="post" >
-        <h2 align="center" class="mt-4 mb-3">ระบบป้อนข้อมูลรายวิชาที่ไม่ผ่าน</h2><br>
-        <div class="form-group">
-        <label class="control-label col-sm-2" for="Idnumber">รหัสนักศึกษา:</label>
-        <div class="col-sm-3">
-            <input type="text" class="form-control" id="studentid" placeholder="รหัสนักศึกษา" name="studentid">
-        </div>
-        </div>
-        <div class="form-group">
-        <label class="control-label col-sm-2" for="Idnumber">ชื่อนักศึกษา:</label>
-        <div class="col-sm-3">
-            <input type="text" class="form-control" id="studentname" placeholder="ชื่อนักศึกษา" name="Idnumber">
-        </div>
-        </div>
-        <div class="form-group">
-        <label class="control-label col-sm-2" for="idcourse">รหัสวิชา:</label>
-        <div class="col-sm-3">          
-            <input type="text" class="form-control" id="courseid" placeholder="รหัสวิชา" name="courseid">
-        </div>
-        </div>
-        <div class="form-group">
-        <label class="control-label col-sm-2" for="idcourse">ชื่อวิชา:</label>
-        <div class="col-sm-3">          
-            <input type="text" class="form-control" id="namecourse" placeholder="ชื่อวิชา" name="namecourse">
-        </div>
-        </div>
-        
-        <div class="form-group">
-        <label class="control-label col-sm-2" for="year">ปีการศึกษา:</label>
-        <div class="col-sm-3">          
-            <input type="text" class="form-control" id="year" placeholder="ปีการศึกษา" name="year">
-        </div>
-        </div>
-        <label class="control-label col-sm-2" for="pwd">ภาคการศึกษา:</label>
-        <select name="term">
-        <option class="dropdown-item" value="1">1</option>
-        <option class="dropdown-item" value="2">2</option>
-        <option class="dropdown-item" value="3">3</option>
-        </select>
-    <br>
-    <br>
-
-        <label class="control-label col-sm-2" for="pwd">เกรดที่ได้รับ:</label>
-        <select  name="grade">
-        <option value="W">W</option>
-        <option value="F">F</option>
-        <option value="D">D</option>
-        <option value="D+">D+</option>
-        </select>
-        <div class="form-group">        
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-primary">บันทึกข้อมูล</button>
-        </div>
-        </div>
+  <form class="form-horizontal" action="/action_page.php" >
+   <h2 align="center" class="mt-4 mb-3">ป้อนข้อมูลรายวิชาที่ไม่ผ่าน</h2><br>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Idnumber">รหัสนักศึกษา:</label>
+      <div class="col-sm-3">
+        <input type="Idnumber" class="form-control" id="Idnumber" placeholder="รหัสนักศึกษา" name="Idnumber">
+      </div>
+    </div>
     
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="idcourse">รหัสวิชา:</label>
+      <div class="col-sm-3">          
+        <input type="idcourse" class="form-control" id="idcourse" placeholder="รหัสวิชา" name="idcourse">
+      </div>
+    </div>
+    
+    
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="year">ปีการศึกษา:</label>
+      <div class="col-sm-3">          
+        <input type="year" class="form-control" id="year" placeholder="ปีการศึกษา" name="year">
+      </div>
+    </div>
+    <label class="control-label col-sm-2" for="pwd">ภาคการศึกษา:</label>
+    <select>
+      <option class="dropdown-item" value="volvo">1</option>
+      <option class="dropdown-item" value="saab">2</option>
+      <option class="dropdown-item" value="opel">3</option>
+    </select>
+<br>
+<br>
+
+    <label class="control-label col-sm-2" for="pwd">เกรดที่ได้รับ:</label>
+    <select  name="grade">
+    <option value="volvo">W</option>
+    <option value="saab">F</option>
+    <option value="opel">D</option>
+    <option value="opel">D+</option>
+    </select>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">บันทึกข้อมูล</button>
+      </div>
+    </div>
+  
 </form>
 
 </body>
