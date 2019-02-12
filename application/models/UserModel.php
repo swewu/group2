@@ -29,4 +29,14 @@ class UserModel extends CI_Model
     function insert_regrade($data){
         return $this->db->insert("regrade", $data);
     }
+
+    function update_regrade($data){
+        $this->db->where("gradeid",$data["gradeid"]);
+        $result = $this->db->update('regrade', $data);
+        return $result;
+    }
+
+    function delete_regrade($gradeid){
+        return $this->db->delete('regrade', array('gradeid' => $gradeid));
+    }
 }
