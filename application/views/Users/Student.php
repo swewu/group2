@@ -91,7 +91,7 @@
                 echo "<td>".$r->courseid."</td>";
                 echo "<td>".$r->term."</td>"; 
                 echo "<td>".$r->grade."</td>"; 
-                echo "<td><center><i class='far fa-edit'></i>  <a href='http://localhost/group2/api/User/delete_regrade/?gradeid='.$r->gradeid.'><i class='fa fa-trash' aria-hidden='true'></i></center></td>";
+                echo "<td><center><i class='far fa-edit'></i>  <a href='http://localhost/group2/api/User/delete_regrade/?gradeid=$r->gradeid'><i class='fa fa-trash' aria-hidden='true'></i></center></td>";
             echo "</tr>";
         }
     ?>
