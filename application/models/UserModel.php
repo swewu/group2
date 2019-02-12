@@ -39,4 +39,14 @@ class UserModel extends CI_Model
     function delete_regrade($gradeid){
         return $this->db->delete('regrade', array('gradeid' => $gradeid));
     }
+
+    public function getData(){
+
+        $this->db->select('*');
+        $this->db->from('regrade');
+        $query = $this->db->get();
+        $data['result'] = $query->result();
+        return $data;
+        
+    }
 }

@@ -74,7 +74,7 @@
 
         <tr>
           <th>รหัสนักศึกษา</th>
-          <th>รายวิชา</th>
+          <th>รหัสวิชา</th>
           <th>ภาคการศึกษา</th>
           <th>ผลการเรียน</th>
 
@@ -82,15 +82,17 @@
         </tr>
       </thead>
       <tbody>
-
-        <tr>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-
-
-        </tr>
+      <?php
+        foreach($result as $r){
+            echo "<tr>";
+                echo "<td>".$r->gradeid."</td>";
+                echo "<td>".$r->courseid."</td>";
+                echo "<td>".$r->term."</td>"; 
+                echo "<td>".$r->grade."</td>";
+                                    
+            echo "</tr>";
+        }
+    ?>
         <tr>
         </tr>
       </tbody>
