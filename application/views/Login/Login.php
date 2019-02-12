@@ -41,8 +41,7 @@
 						</div>
 				</div>
 				<div class="d-flex justify-content-center mt-3 login_container">
-                    <input type="submit" id="login" name="login" class="btn" style="width: 100%; background: #000099; color: white;">
-					
+          <input type="submit" id="login" name="login" class="btn" value="เข้าสู่ระบบ" style="width: 100%; background: #000099; color: white;">
 				</div>
 				</form>
 			</div>
