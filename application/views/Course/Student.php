@@ -9,13 +9,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <style>
-body {font-family: Arial, Helvetica, sans-serif; }
+/* body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("public/image/background1.png") !important; 
+  } */
 form {
   border: 1px solid #f1f1f1 ; 
   margin:50px 0px; 
   padding:0px; align:center; 
   width: 80%;  
-  background-color: #FFFFF0;
+  background-color: #ffffff;
   border-radius: 20px; }
 
 
@@ -41,7 +44,7 @@ input{
   cursor: pointer;
   border-radius: 8px;
   width: auto;
-}
+} 
 
 button {
   background-color: #20B2AA;
@@ -68,11 +71,9 @@ button:hover {
   text-align: center;
   margin: 24px 0 12px 0;
 }
-
-
-
 </style>
-<body>
+
+<body style ='background-image: url("../public/image/background1.png")' >
 
 
 <div class="container">
