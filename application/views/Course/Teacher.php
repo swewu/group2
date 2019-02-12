@@ -9,7 +9,7 @@
 </head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif; }
-form {border: 1px solid #f1f1f1 ; margin:50px 0px; padding:0px; align:center; width: 80%; }
+form {border: 1px solid #f1f1f1 ; margin:50px 0px; padding:0px; align:center; width: 80%; background-color: white; border-radius: 8px;  }
 
 .switch {
   position: relative;
@@ -131,9 +131,9 @@ button:hover {
 </style>
 <body>
   
+<body style ='background-image: url("../public/image/background1.png")' >
 
-
-<center><form>
+<center><form class="form-horizontal" action="/action_page.php"  >
 <h1 align = 'center'>Teacher</h1>
 <div class="container" align="left">
   <div class="container">
