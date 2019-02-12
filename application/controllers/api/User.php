@@ -88,7 +88,7 @@ class User extends CI_Controller
     }
 
     function delete_regrade(){
-        $gradeid = $this->get('gradeid');
+        $gradeid = $this->input->get('gradeid');
         $result =  $this->UserModel->delete_regrade($gradeid);
         if($result){
             echo "<script>alert('Delete regrade success');window.location='http://localhost/group2/student';</script>";

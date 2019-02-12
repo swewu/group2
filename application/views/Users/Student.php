@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <style>
   body {font-family: Arial, Helvetica, sans-serif; }
@@ -74,23 +75,26 @@
 
         <tr>
           <th>รหัสนักศึกษา</th>
-          <th>รายวิชา</th>
+          <th>รหัสวิชา</th>
           <th>ภาคการศึกษา</th>
           <th>ผลการเรียน</th>
+          <th></th>
 
 
         </tr>
       </thead>
       <tbody>
-
-        <tr>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-
-
-        </tr>
+      <?php
+        foreach($result as $r){
+            echo "<tr>";
+                echo "<td>".$r->gradeid."</td>";
+                echo "<td>".$r->courseid."</td>";
+                echo "<td>".$r->term."</td>"; 
+                echo "<td>".$r->grade."</td>"; 
+                echo "<td><center><i class='far fa-edit'></i>  <a href='http://localhost/group2/api/User/delete_regrade/?gradeid=$r->gradeid'><i class='fa fa-trash' aria-hidden='true'></i></center></td>";
+            echo "</tr>";
+        }
+    ?>
         <tr>
         </tr>
       </tbody>
