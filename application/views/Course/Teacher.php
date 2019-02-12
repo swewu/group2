@@ -1,28 +1,51 @@
 <!DOCTYPE html>
-<html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+</head>
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+body {font-family: Arial, Helvetica, sans-serif; }
+form {border: 1px solid #f1f1f1 ; margin:50px 0px; padding:0px; align:center; width: 80%; }
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
+select{
+  background-color: #20B2AA;
+  color: white;
+  padding: 4px 20px;
   margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: auto;
+}
+
+table{
+  border: 1px solid #f1f1f1;
+}
+
+input{
+  background-color: #ff751a;
+  color: white;
+  padding: 4px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: auto;
 }
 
 button {
   background-color: #20B2AA;
   color: white;
-  padding: 14px 20px;
+  padding: 4px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  border-radius: 8px;
+  width: auto;
 }
 
 button:hover {
@@ -39,59 +62,114 @@ button:hover {
   text-align: center;
   margin: 24px 0 12px 0;
 }
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
+.bt{
+  margin:50px 0px;
 }
 
-.container {
-  padding: 16px;
-}
 
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
 </style>
-</head>
 <body>
+  
 
-<h1 align = 'right'>Username Teacher</h1>
 
+<center><form>
+<h1 align = 'center'>Teacher</h1>
+<div class="container" align="left">
   <div class="container">
-    <label for="uname"><b>ชื่อนักศึกษา</b></label>
-    <input type="text" placeholder="กรุณากรอกชื่อ" name="uname" required>
-
-    <label for="psw"><b>รายวิชา</b></label>
-    <input type="password" placeholder="กรุณากรอกชื่อวิชา" name="psw" required>
-        
-    <label>
-      <input type="checkbox"  name="approve"> อนุมัติ
-       <input type="checkbox"  name="not allowed"> ไม่อนุมัติ
-       <button type="submit" class="btn btn-primary">Submit</button>
-       
-    </label>
-    
- 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">cancal</button>
-    
+    <div class="row">
+      <div class="col-6">
+          เทอม
+          <select name="cars" size="1">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          </select>
+          ปี
+          <select name="cars" size="1">
+          <option value="2562">2562</option>
+          <option value="2561">2561</option>
+          <option value="2560">2560</option>
+          <option value="2559">2559</option>
+        </select>
+        <button type="submit" id="search">ค้นหา</button>
+      </div>
+    </div>
   </div>
 
-  </form>
-</div>
+  
+<br>
+  <table class="table table-striped" >
+    <thead>
+      <tr>
+        <th>รหัสนักศึกษา</th>
+        <th>ชื่อ-นามสกุล</th>
+        <th>รายวิชา</th>
+        <th>เกรด</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td>59114256</td>
+        <td>Doe</td>
+        <td>SWE-111</td>
+        <td>D+</td>
+      </tr>
+      <tr>
+        <td>60588666</td>
+        <td>Moe</td>
+        <td>SCI-123</td>
+        <td>D</td>
+      </tr>
+      <tr>
+        <td>58465253</td>
+        <td>Dooley</td>
+        <td>IT-114</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>59685966</td>
+        <td>Momo</td>
+        <td>SWE-132</td>
+        <td>F</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+  <?php
+        // foreach($result as $r){
+        //     echo "<tr>";
+        //         echo "<td>".$r->studentid."</td>";
+        //         echo "<td>".$r->studentname."</td>";
+        //         echo "<td>".$r->courseid."</td>";
+        //         echo "<td>".$r->grade."</td>";
 
+        //         // echo "<td>".$r->gradeid."</td>";
+        //         // echo "<td>".$r->term."</td>";
+        //         // echo "<td>".$r->year."</td>";
+                
+        //     echo "</tr>";
+        // }
+        
+    ?>
+  
+        <!-- <script>
+          "ajax":{
+                "url": base_url+"",
+                "dataType": "json",
+                "type": "POST",
+                "data": function ( data ) {
+                    data.year = $("#search").val(),
+                    data.term- = $("#search").val(),
+
+                   
+                }
+            },
+        </script> -->
+
+</div>
+</form></center>
 </body>
 </html>
