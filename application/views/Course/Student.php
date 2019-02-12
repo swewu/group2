@@ -93,7 +93,7 @@ button:hover {
     <div class="form-group col-md-12">
       <div class="col-md-6">
         <label for="year">ปีการศึกษา:</label>
-        <input type="Idnumber" class="form-control" id="Idnumber" placeholder=" " name="Idnumber">
+        <input type="year" class="form-control" id="year" placeholder=" " name="year">
       </div>
       <div class="col-md-6">
       <label  for="pwd">ภาคการศึกษา:</label>
